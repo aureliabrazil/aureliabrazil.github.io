@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Aurelia Brazil</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Leonardo Soares">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="columns is-gapless is-multiline is-mobile">
+    <!-- Inicio do menu de Navegação -->
+    <div class="column is-12">
+      <header>
+        <section class="hero">
+          <div class="hero-head">
+            <div class="container">
+                <nav class="nav has-shadow">
+                  <div class="nav-left">
+                    <a href="/" class="nav-item is-tab is-brand">
+                    <figure class="image">
+                      <img src="images/aurelia.svg" alt="Logo oficial do Aurelia Framework">
+                    </figure>
+                    </a>
+                  </div>
+                  <div class="nav-center">
+                    <!-- Slack Badge -->
+                    <span class="nav-item">
+                    <!-- Slack -->
+                    <script async defer src="http://aureliabrazil.com.br:3000/slackin.js"></script>
+                    </span>
+                    <!-- Github Button -->
+                    <span class="nav-item">
+                      <!-- Place this tag where you want the button to render. -->
+                      <a class="github-button" href="https://github.com/aureliabrazil/aureliabrazil.github.io" data-count-href="/aureliabrazil/aureliabrazil.github.io/stargazers" data-count-api="/repos/aureliabrazil/aureliabrazil.github.io#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star aureliabrazil/aureliabrazil.github.io on GitHub">Star</a>
+                    </span>
+                  </div>
+                  <div class="nav-menu nav-right">
+                    <a href="http://aurelia.io/" target="_blank" class="nav-item is-tab">Site Oficial</a>
+                    <a href="http://aurelia.io/hub.html" target="_blank" class="nav-item is-tab">Documentation</a>
+                    <a href="http://blog.durandal.io/" target="_blank" class="nav-item is-tab">Blog</a>
+                  </div>
+                  <span id="nav-toggle" class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </nav>
+            </div>
+          </div>
+        </section>
+      </header>
+    </div>
+    <!-- Fim do menu de Navegação -->
+    <!-- Inicio, Apenas para deslocar o Conteudo para baixo -->
+    <div class="column is-12">
+      <section class="hero">
+        <div class="hero-body">
+        </div>
+      </section>
+    </div>
+    <!-- Fim, Apenas para deslocar o Conteudo para baixo-->
+    <!-- Inicio do Conteúdo -->
+    <div class="column is-12">
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <img src="images/logo.png" alt="Logo Aurelia">
+              <h1 class="title">
+              <span class="aurelia" style="color:green">Aurelia</span><span class="brazil" style="color:yellow">Brazil</span>
+              </h1>     
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Fim do Conteúdo -->
+    <!-- Inicio do Slack -->
+    <div class="column is-12">
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h2 class="subtitle">
+              Junte-se á comunidade brasileira de Aureila Framework no Slack
+              </h2>
+              <form method="POST" action="https://aureliabrazil.herokuapp.com/invite" id="join-form" class="form">
+                <div class="control is-grouped">
+                  <p class="control is-expanded has-icon">
+                    <input type="email" name="email" placeholder="Enter Your Email Address" id="slack-email" class="input">
+                    <i class="fa fa-envelope"></i>
+                  </p>
+                   <p class="control">
+                      <input type="submit" value="Entre" class="submit button is-primary">
+                   </p>
+                </div>
+              </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Fim do Slack -->
+    <!-- Inicio do Rodapé -->
+    <div class="column is-12">
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered has-shadow">
+            <p>Copyright © 2015-2016 Durandal Inc. / All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+   <!-- Fim do Rodapé -->
+  </div>
+</div>
+<!-- Github Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Scripts Auto Invite-->
+<script>
+var tokenRequired = false;
+var form = document.getElementById('join-form');
+var email = document.getElementById('slack-email');
+var token = document.getElementById('slack-token');
+form.addEventListener('submit', function(evt) {
+  if (!email.value) {
+    evt.preventDefault();
+  }
+  if (tokenRequired && !token.value) {
+    evt.preventDefault();
+  }
+});
+</script>
+</body>
+</html>
